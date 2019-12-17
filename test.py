@@ -1,5 +1,14 @@
 # for testing purposes 
 
+def generate_board(): 
+  """
+  Randomly generate a board 
+  Parameters: None 
+  Return: board (2-D list of ints)
+  """
+  board = [[0 for x in range(9)]for y in range(9)] 
+  return board
+
 def solve_board(board): 
   """
   Solves the board and checks if it is solved
@@ -87,21 +96,13 @@ def print_board(board):
   pass
 
 def main(): 
-  board=[[3,0,6,5,0,8,4,0,0], 
-         [5,2,0,0,0,0,0,0,0], 
-         [0,8,7,0,0,0,0,3,1], 
-         [0,0,3,0,1,0,0,8,0], 
-         [9,0,0,8,6,3,0,0,5], 
-         [0,5,0,0,9,0,6,0,0], 
-         [1,3,0,0,0,0,2,5,0], 
-         [0,0,0,0,0,0,0,7,4], 
-         [0,0,5,2,0,6,3,0,0]] 
+  board = generate_board()
   print(" ----Original Board----") 
   print_board(board) 
-  solve_board(board) 
+  # solve_board(board) 
 
-  print("\n ----Solved Board----")
-  print_board(board)
+  # print("\n ----Solved Board----")
+  # print_board(board)
   # print(find_empty(board))
 
   pass
