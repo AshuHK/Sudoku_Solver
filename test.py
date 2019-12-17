@@ -34,6 +34,12 @@ def find_empty(board):
   return (-1, -1)
 
 def valid(board, num_int, pos_tuple): 
+  """
+  Checks if the number is valide at a certain position 
+  Parameters: board (2-D list of ints), num_int (int to insert), 
+              pos_tuple [(row, col) pair of ints] 
+  Return: boolean of if the number is valid at that position
+  """
   # row check
   for i in range(len(board[0])): 
     if board[pos_tuple[0]][i] == num_int and pos_tuple[1] != i: 
@@ -89,7 +95,7 @@ def main():
   print(" ----Original Board----") 
   print_board(board) 
   solve_board(board) 
-  
+
   print("\n ----Solved Board----")
   print_board(board)
   # print(find_empty(board))
