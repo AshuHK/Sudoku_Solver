@@ -3,12 +3,22 @@
 def solve_board(board): 
 
   first_empty_tuple = find_empty(board)
-  if first_empty_tuple != (-1, -1): 
+  if first_empty_tuple == (-1, -1): 
      return True
   else: 
-    row, col = first_empty_tuple 
-    -
-  pass
+    row_int, col_int = first_empty_tuple
+  
+  for i in range(1, 10): 
+    if valid(board, i, (row_int, col_int)): 
+      board[row_int][col_int] = i 
+
+      if solve_board(board):
+        return True 
+      
+      board[row_int][col_int] = 0 
+
+  return False
+
 
 def find_empty(board):
   """
@@ -26,12 +36,12 @@ def find_empty(board):
 def valid(board, num_int, pos_tuple): 
   # row check
   for i in range(len(board[0])): 
-    if board[pos_tuple[0]][i] == num and pos_tuple[1] != i: 
+    if board[pos_tuple[0]][i] == num_int and pos_tuple[1] != i: 
       return False 
 
   # column check 
   for i in range(len(board)): 
-    if board[i][pos_tuple[1]] == num and pos_tuple[0] != i: 
+    if board[i][pos_tuple[1]] == num_int and pos_tuple[0] != i: 
       return False 
   
   # cell check
@@ -40,7 +50,7 @@ def valid(board, num_int, pos_tuple):
 
   for i in range(cell_y * 3, cell_y * 3 + 3): 
     for j in range(cell_x * 3, cell_x * 3 + 3): 
-      if board[i][j] == num and (i,j) != pos_tuple: 
+      if board[i][j] == num_int and (i,j) != pos_tuple: 
         return False
 
   return True
@@ -79,6 +89,7 @@ def main():
   print(" ----Original Board----") 
   print_board(board) 
 
+  solve_board(board) 
   print("\n ----Solved Board----")
   print_board(board)
   # print(find_empty(board))
