@@ -1,4 +1,3 @@
-import pygame 
-import solver 
-import time 
-
+import pygame
+# import solver 
+import time
