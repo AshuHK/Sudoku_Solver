@@ -1,7 +1,11 @@
 # for testing purposes 
 
 def solve_board(board): 
-
+  """
+  Solves the board and checks if it is solved
+  Parameters: board (2-D list of ints)
+  Returns: boolean for if the board is solved 
+  """
   first_empty_tuple = find_empty(board)
   if first_empty_tuple == (-1, -1): 
      return True
