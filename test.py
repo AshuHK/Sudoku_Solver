@@ -1,4 +1,7 @@
-# for testing purposes 
+# this file is for testing purposes 
+
+# this is to check if the solving takes too long
+import time 
 
 def generate_board(): 
   """
