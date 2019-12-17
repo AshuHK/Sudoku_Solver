@@ -88,8 +88,8 @@ def main():
          [0,0,5,2,0,6,3,0,0]] 
   print(" ----Original Board----") 
   print_board(board) 
-
   solve_board(board) 
+  
   print("\n ----Solved Board----")
   print_board(board)
   # print(find_empty(board))
