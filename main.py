@@ -14,7 +14,7 @@ class TestApp(App):
                [1,3,0,0,0,0,2,5,0], 
                [0,0,0,0,0,0,0,7,4], 
                [0,0,5,2,0,6,3,0,0]] 
-        
+        # solver.solve_board(board)
         layout = GridLayout(cols = 9, rows = 9)
         for row in board: 
             for num in row: 
@@ -23,5 +23,6 @@ class TestApp(App):
                 else: 
                     layout.add_widget(Button(text = ""))
         return layout
+    
 
 TestApp().run()
