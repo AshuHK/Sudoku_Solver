@@ -2,10 +2,12 @@ import solver
 from kivy.app import App
 from kivy.core.window import Window 
 from kivy.uix.button import Button
+from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.gridlayout import GridLayout
 
-class SudokuApp(App):
-    def build(self):
+class SudokuSolver(GridLayout):
+    def __init__ (self, **kwargs): 
+        super().__init__(**kwargs)
         board=[[3,0,6,5,0,8,4,0,0], 
                [5,2,0,0,0,0,0,0,0], 
                [0,8,7,0,0,0,0,3,1], 
@@ -23,7 +25,11 @@ class SudokuApp(App):
                     layout.add_widget(Button(text = str(num)))
                 else: 
                     layout.add_widget(Button(text = ""))
-        return layout
+        pass
+
+class SudokuWindow(App):
+    def build(self):
+        return SudokuSolver()
     
 
-SudokuApp().run()
+SudokuWindow().run()
