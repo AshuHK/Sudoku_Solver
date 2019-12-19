@@ -4,7 +4,7 @@ from kivy.core.window import Window
 from kivy.uix.button import Button
 from kivy.uix.gridlayout import GridLayout
 
-class TestApp(App):
+class SudokuApp(App):
     def build(self):
         board=[[3,0,6,5,0,8,4,0,0], 
                [5,2,0,0,0,0,0,0,0], 
@@ -26,4 +26,4 @@ class TestApp(App):
         return layout
     
 
-TestApp().run()
+SudokuApp().run()
