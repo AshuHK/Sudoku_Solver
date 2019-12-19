@@ -1,5 +1,6 @@
 import solver
 from kivy.app import App
+from kivy.core.window import Window 
 from kivy.uix.button import Button
 from kivy.uix.gridlayout import GridLayout
 
