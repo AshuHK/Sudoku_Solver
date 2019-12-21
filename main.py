@@ -1,10 +1,9 @@
-import solver
+# import solver
+import time 
 from kivy.app import App
 from kivy.core.window import Window 
 from kivy.uix.button import Button
-from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.gridlayout import GridLayout
-from kivy.graphics import Line
 
 class SudokuWindow(App):
     def build(self):
@@ -18,13 +17,23 @@ class SudokuWindow(App):
                [1,3,0,0,0,0,2,5,0], 
                [0,0,0,0,0,0,0,7,4], 
                [0,0,5,2,0,6,3,0,0]] 
+        # solver.solve_board(board)
         for row in board: 
             for num in row: 
                 if num != 0: 
                     app_layout.add_widget(Button(text = str(num)))
                 else: 
                     app_layout.add_widget(Button(text = ""))
+        
+        self.solve_board(app_layout, board)
         return app_layout
+
+
+    def solve_board(self, app_layout, board): 
+        
+        pass
+    
+        
 
 
 if __name__ == "__main__": 
