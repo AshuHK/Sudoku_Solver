@@ -30,9 +30,21 @@ class SudokuWindow(App):
 
 
     def solve_board(self, app_layout, board): 
-        
+
         pass
     
+    def find_empty(self, board): 
+        for row in board:
+            for num in row: 
+                if num == 0: 
+                    return (self.board.index(row), row.index(num))
+        
+        return (-1, -1)
+    
+
+    def valid(self, board, num_int, pos_tuple): 
+
+        pass
         
 
 
