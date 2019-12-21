@@ -29,9 +29,9 @@ def find_empty(board):
   Return: tuple of two ints formmated (row, column)
   """
   for row in board: 
-    for spot in row: 
-      if spot == 0: 
-        return (board.index(row), row.index(spot))
+    for num in row: 
+      if num == 0: 
+        return (board.index(row), row.index(num))
   
   return (-1, -1)
 
