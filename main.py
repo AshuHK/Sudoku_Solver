@@ -4,10 +4,11 @@ from kivy.core.window import Window
 from kivy.uix.button import Button
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.gridlayout import GridLayout
+from kivy.graphics import Line
 
-class SudokuSolver(GridLayout):
-    def __init__ (self, **kwargs): 
-        super().__init__(**kwargs)
+class SudokuWindow(App):
+    def build(self):
+        app_layout = GridLayout(cols = 9, rows = 9)
         board=[[3,0,6,5,0,8,4,0,0], 
                [5,2,0,0,0,0,0,0,0], 
                [0,8,7,0,0,0,0,3,1], 
@@ -17,19 +18,14 @@ class SudokuSolver(GridLayout):
                [1,3,0,0,0,0,2,5,0], 
                [0,0,0,0,0,0,0,7,4], 
                [0,0,5,2,0,6,3,0,0]] 
-        # solver.solve_board(board)
-        layout = GridLayout(cols = 9, rows = 9)
         for row in board: 
             for num in row: 
                 if num != 0: 
-                    layout.add_widget(Button(text = str(num)))
+                    app_layout.add_widget(Button(text = str(num)))
                 else: 
-                    layout.add_widget(Button(text = ""))
-        pass
+                    app_layout.add_widget(Button(text = ""))
+        return app_layout
 
-class SudokuWindow(App):
-    def build(self):
-        return SudokuSolver()
-    
 
-SudokuWindow().run()
+if __name__ == "__main__": 
+    SudokuWindow().run()
