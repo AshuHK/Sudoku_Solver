@@ -1,5 +1,3 @@
-# this file is for testing purposes 
-# this is to check if the solving takes too long
 import time 
 
 def solve_board(board): 
@@ -73,7 +71,7 @@ def print_board(board):
   Parameters: board (2-D list of ints)
   Return: None
   """ 
-
+  print("-----------------------")
   for i in range(len(board)): 
     if i % 3 == 0 and i != 0: 
       print("-----------------------")
@@ -108,8 +106,8 @@ def main():
   print("\n ----Solved Board----")
   print_board(board)
   
-  print("Solve time: {} seconds".format(start_time - time.time()))  
-  pass
+  print("Solve time: {} seconds".format(time.time() - start_time))
+  return None
 
 
 if __name__ == "__main__": 
