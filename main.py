@@ -2,7 +2,7 @@ import time
 
 def solve_board(board):
   """
-  Solves the board and checks if it is solved
+  Solves the board and checks if it is solved using backtracking 
   Parameters: board (2-D list of ints)
   Returns: boolean for if the board is solved
   """
