@@ -114,7 +114,7 @@ def main():
     print("\n ----Solved Board----")
     print_board(board)
 
-    print("Solve time: {} seconds".format(time.time() - start_time))
+    print("Solve time: {:.4f} seconds".format(time.time() - start_time))
     return None
 
 
