@@ -1,5 +1,6 @@
 import time
 
+
 def solve_board(board):
     """
   Solves the board and checks if it is solved using backtracking
