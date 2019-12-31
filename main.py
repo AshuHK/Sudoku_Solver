@@ -91,6 +91,8 @@ def print_board(board):
 
 
 def main():
+
+    # hardest known Sudoku puzzle unsolved
     board = [
         [8, 0, 0, 0, 0, 0, 0, 0, 0],
         [0, 0, 3, 6, 0, 0, 0, 0, 0],
