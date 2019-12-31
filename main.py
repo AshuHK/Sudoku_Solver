@@ -1,6 +1,5 @@
 import time
 
-
 def solve_board(board):
     """
   Solves the board and checks if it is solved using backtracking
@@ -87,7 +86,7 @@ def print_board(board):
                 print(board[i][j], end="\n")
             else:
                 print(str(board[i][j]) + " ", end="")
-    pass
+    return None
 
 
 def main():
