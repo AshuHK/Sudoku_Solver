@@ -3,10 +3,10 @@ import time
 
 def solve_board(board):
     """
-  Solves the board and checks if it is solved using backtracking
-  Parameters: board (2-D list of ints)
-  Returns: boolean for if the board is solved
-  """
+    Solves the board and checks if it is solved using backtracking
+    Parameters: board (2-D list of ints)
+    Returns: boolean for if the board is solved
+    """
     first_empty_tuple = find_empty(board)
     if first_empty_tuple == (-1, -1):
         return True
@@ -27,10 +27,10 @@ def solve_board(board):
 
 def find_empty(board):
     """
-  Finds first empty cell on the board
-  Parameters: board (2-D list of ints)
-  Return: tuple of two ints formmated (row, column)
-  """
+    Finds first empty cell on the board
+    Parameters: board (2-D list of ints)
+    Return: tuple of two ints formmated (row, column)
+    """
     for row in board:
         for spot in row:
             if spot == 0:
@@ -41,11 +41,11 @@ def find_empty(board):
 
 def valid(board, num_int, pos_tuple):
     """
-  Checks if the number is valide at a certain position
-  Parameters: board (2-D list of ints), num_int (int to insert),
-              pos_tuple [(row, col) pair of ints]
-  Return: boolean of if the number is valid at that position
-  """
+    Checks if the number is valide at a certain position
+    Parameters: board (2-D list of ints), num_int (int to insert),
+                pos_tuple [(row, col) pair of ints]
+    Return: boolean of if the number is valid at that position
+    """
     # row check
     for i in range(len(board[0])):
         if board[pos_tuple[0]][i] == num_int and pos_tuple[1] != i:
@@ -70,10 +70,10 @@ def valid(board, num_int, pos_tuple):
 
 def print_board(board):
     """
-  Prints the board
-  Parameters: board (2-D list of ints)
-  Return: None
-  """
+    Prints the board
+    Parameters: board (2-D list of ints)
+    Return: None
+    """
     print("-----------------------")
     for i in range(len(board)):
         if i % 3 == 0 and i != 0:
