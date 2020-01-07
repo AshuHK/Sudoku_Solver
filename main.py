@@ -108,15 +108,15 @@ def main():
     print(" ----Original Board----")
     print_board(board)
 
-    start_time = time.time()
     solve_board(board)
 
     print("\n ----Solved Board----")
     print_board(board)
 
-    print("Solve time: {:.4f} seconds".format(time.time() - start_time))
     return None
 
 
 if __name__ == "__main__":
+    start_time = time.time() 
     main()
+    print("Execution time: {} seconds".format(time.time() - start_time))
